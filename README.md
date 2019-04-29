@@ -3,6 +3,8 @@ This is the documentation for deploying the ceros-ski app
 The ceros-ski app is a nodejs app and same is ccontainerize using docker for deployment.
 The App traffic flow is as below:
 
+
+
 The deployment for the app takes place in two parts:
 1. Infrastructure build using Terraform
 2. App deployment on infrastructure using a bash script.
