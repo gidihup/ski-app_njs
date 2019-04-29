@@ -1,9 +1,11 @@
 Maitainer: MAINTAINER app-dev@ceros.com
 This is the documentation for deploying the ceros-ski app
 The ceros-ski app is a nodejs app and same is ccontainerize using docker for deployment.
+This set up fulfills all the general requirement for the deploy as in the challenge document.
+It also fulfills 2 of the bonus challenge save the last one. 
+One way to do the last bonus challenge, i.e. update app without downtime, would be to spin up new (green) deployment and have DNS (say Route 53) switch traffic from the old (blue) deployment to the new deployment. There should be no downtime for this method.
+
 The App traffic flow is as below:
-
-
 
 The deployment for the app takes place in two parts:
 1. Infrastructure build using Terraform
