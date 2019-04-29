@@ -7,6 +7,9 @@ One way to do the last bonus challenge, i.e. update app without downtime, would 
 
 The App traffic flow is as below:
 
+<img width="723" alt="Ceros-ski App Traffic Diagram" src="https://user-images.githubusercontent.com/37908685/56900121-0054c800-6a8d-11e9-9e5b-33cb8fb25a3b.png">
+
+
 The deployment for the app takes place in two parts:
 1. Infrastructure build using Terraform
 2. App deployment on infrastructure using a bash script.
