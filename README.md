@@ -40,10 +40,12 @@ After terraforms builds the EC2 Instance, it calls the bash script, **bootstrap.
   - Create an AWS account or use an existing AWS account
   - Have the app folder copied onto the computer you want to deploy from
   - Have a valid Access key ID and Secret access key set up with the appropriate permissions on AWS IAM
-  - Have the Access key ID and Secret access key securely set to the appropriate variable in the **variable.tf file**. Best practise dictates that credentials/secrets should not be publicly accessible, secrets can be defined in environment variables or a secret store
+  - Have the Access key ID and Secret access key securely set to the appropriate variable in the **variable.tf file**. Best practice dictates that credentials/secrets should not be publicly accessible, secrets can be defined in environment variables or a secret store
   - Have Terraform installed and initialised
   - In your console, type **_terraform apply_** then press the enter key
 
-After terraform concludes the deployment, it outputs the public IP of the EC2 instance through which the application can be accessed on the internet.
+After terraform concludes the deployment, it outputs the public IP (see example belwo) of the EC2 instance through which the application can be accessed on the internet.
+
+<img width="723" alt="deployment_output" src="https://user-images.githubusercontent.com/37908685/56973879-a116b680-6b65-11e9-8dba-55d23bf83d6c.png">
 
 NB: One way to do the last bonus challenge, i.e. update app without downtime, would be to spin up new (green) deployment and                                                have DNS (say Route 53) switch traffic from the old (blue) deployment to the new deployment. There should be no downtime for   this method.
