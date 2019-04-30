@@ -3,9 +3,7 @@
 
 **Maintainer**: app-dev@ceros.com
     
-This is the documentation for deploying the ceros-ski app. The ceros-ski app is a nodejs  app and same is containerize using docker for deployment on EC2 on AWS. This set up fulfills all the general requirements for the deployment as in the challenge document. It also fulfills 2 of the bonus challenge, save the last one.
-
-One way to do the last bonus challenge, i.e. update app without downtime, would be to spin up new (green) deployment and                                                have DNS (say Route 53) switch traffic from the old (blue) deployment to the new deployment. There should be no downtime for   this method.
+This is the documentation for deploying the ceros-ski app. This set up fulfils all the general requirements for the deployment as stated in the challenge document. It also fulfils items 1 and 2 in the bonus section of the document.
 
 The App traffic flow is as below:
 
@@ -47,3 +45,5 @@ After terraforms builds the EC2 Instance, it calls the bash script, **bootstrap.
   - In your console, type terraform apply' then the press enter key
 
 After terraform concludes the deployment, it outputs the public IP of the EC2 instance through which the application can be accessed on the internet.
+
+NB: One way to do the last bonus challenge, i.e. update app without downtime, would be to spin up new (green) deployment and                                                have DNS (say Route 53) switch traffic from the old (blue) deployment to the new deployment. There should be no downtime for   this method.
