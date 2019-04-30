@@ -18,7 +18,7 @@ The App traffic flow is as below:
 
 **1. Infrastructure build using Terraform** 
   
-  The infrastructure for the app is built using the concepts of Infrastructure as code on AWS using Terraform. The files used for this are:
+  The infrastructure for the app is built using the concept of Infrastructure as Code on AWS using Terraform. The files used for this are:
   - **main.tf:** This contains the terraform config that builds the AWS infrastructure such as VPC, SG, IGW, subnet and the EC2 instance
   - **variables.tf:** This contains a listing of variables their default values
   - **output.tf:** This contains some important output values, such as the public IP of the instance through which the app would  be accessed through the internet.
