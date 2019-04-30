@@ -1,6 +1,6 @@
 # Deploying The Dockerize Ceros ski nodejs App Unto AWS EC2 Using Terraform
 
-**Maintainer**: MAINTAINER app-dev@ceros.com
+**Maintainer**: app-dev@ceros.com
     
 This is the documentation for deploying the ceros-ski app. The ceros-ski app is a nodejs app and same is ccontainerize using docker for deployment on EC2 on AWS. This set up fulfills all the general requirement for the deploy as in the challenge document. It also fulfills 2 of the bonus challenge save the last one.
 
