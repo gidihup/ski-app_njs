@@ -17,7 +17,7 @@ The following diagram depicts the application traffic flow:
 
 **1. Infrastructure build using Terraform** 
   
-The infrastructure for the app is built using the concept of Infrastructure as Code on AWS using Terraform. The files used for this are:
+The infrastructure for the app is built using the concept of Infrastructure as Code on AWS with Terraform. The files used for this are:
   - **main.tf:** This contains the terraform config that builds the AWS infrastructure such as VPC, SG, IGW, subnet and the EC2 instance
   - **variables.tf:** This contains a listing of variables and their default values
   - **output.tf:** This contains some important output values, such as the public IP of the instance through which the app would  be accessed through the internet.
@@ -37,7 +37,7 @@ After terraforms builds the EC2 Instance, it calls the bash script, **bootstrap.
 
 
 **To deploy the app, do the following:**
-  - Have or create an AWS account
+  - Create an AWS account or use an existing AWS account
   - Have the app folder copied onto a deploy EC2 instance
   - Have a valid Access key ID and Secret access key set up with the appropriate permissions on AWS IAM
   - Have the Access key ID and Secret access key securely set to the appropriate variable in the variable.tf file, e.g. using environment variables (credentials should not be saved in (publicly accessible) files)
