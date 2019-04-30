@@ -40,7 +40,7 @@ After terraforms builds the EC2 Instance, it calls the bash script, **bootstrap.
   - Create an AWS account or use an existing AWS account
   - Have the app folder copied onto the computer you want to deploy from
   - Have a valid Access key ID and Secret access key set up with the appropriate permissions on AWS IAM
-  - Have the Access key ID and Secret access key securely set to the appropriate variable in the variable.tf file, e.g. using environment variables (credentials should not be saved in (publicly accessible) files)
+  - Have the Access key ID and Secret access key securely set to the appropriate variable in the **variable.tf file**, e.g. using environment variables (credentials should not be saved in (publicly accessible) files)
   - Have Terraform installed and initialised
   - In your console, type terraform apply' then the press enter key
 
