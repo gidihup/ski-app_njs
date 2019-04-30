@@ -5,7 +5,7 @@
     
 This is the documentation for deploying the ceros-ski app. This set up fulfils all the general requirements for the deployment as stated in the challenge document. It also fulfils items 1 and 2 in the bonus section of the document.
 
-The App traffic flow is as below:
+The following diagram depicts the application traffic flow:
 
 <img width="723" alt="Ceros-ski App Traffic Diagram" src="https://user-images.githubusercontent.com/37908685/56900121-0054c800-6a8d-11e9-9e5b-33cb8fb25a3b.png">
 
@@ -19,7 +19,7 @@ The App traffic flow is as below:
   
 The infrastructure for the app is built using the concept of Infrastructure as Code on AWS using Terraform. The files used for this are:
   - **main.tf:** This contains the terraform config that builds the AWS infrastructure such as VPC, SG, IGW, subnet and the EC2 instance
-  - **variables.tf:** This contains a listing of variables their default values
+  - **variables.tf:** This contains a listing of variables and their default values
   - **output.tf:** This contains some important output values, such as the public IP of the instance through which the app would  be accessed through the internet.
 
 
