@@ -26,7 +26,7 @@ The App traffic flow is as below:
 
 **2. App deployment on infrastructure using a bash script**
   
-  After terraforms builds the EC2 Instance, it calls the script, bootstrap.sh, to deploy the app.
+  After terraforms builds the EC2 Instance, it calls the bash script, **bootstrap.sh**, to deploy the app.
   The bootstrap script does the following:
   
   - Installs Docker community edition and other utilities
@@ -44,4 +44,6 @@ The App traffic flow is as below:
   - Have a valid Access key ID and Secret access key set up with the appropriate permisions on AWS IAM
   - Have the Access key ID and Secret access key securely set to the appropriate variable in the variable.tf file, e.g. using enviroment variables (credentials should not be saved in (publicly acceessible) files)
   - Have Terraform installed and initialised
-  - finally, enter 'terraform apply' in your console!
+  - In your console, type t'erraform apply' then press enter key
+
+After terraform concludes the deployment, it ouputs the public IP of the EC2 instance through which the application can be accessed on the internet.
