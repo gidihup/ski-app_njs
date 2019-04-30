@@ -1,12 +1,13 @@
-# Deploying The Dockerize Ceros ski nodejs App Unto AWS EC2 Using Terraform
+# TASK : To automate the deployment of _ceros-ski_ Node.js application to an AWS EC2 instance
+### TECHNOLOGIES USED: Docker, Docker-compose, Terraform, EC2 (free tier; Ubuntu 18.04 LTS), Nginx
 
 **Maintainer**: app-dev@ceros.com
     
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the documentation for deploying the ceros-ski app. The ceros-ski app is a nodejs app and same is containerize using docker for deployment on EC2 on AWS. This set up fulfills all the general requirements for the deployment as in the challenge document. It also fulfills 2 of the bonus challenge, save the last one.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the documentation for deploying the ceros-ski app. The ceros-ski app is a nodejs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app and same is containerize using docker for deployment on EC2 on AWS. This set up fulfills all the general requirements for the deployment as in the challenge document. It also fulfills 2 of the bonus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;challenge, save the last one.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One way to do the last bonus challenge, i.e. update app without downtime, would be to spin up new (green) deployment and                                                have DNS (say Route 53) switch traffic from the old (blue) deployment to the new deployment. There should be no downtime for   this method.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One way to do the last bonus challenge, i.e. update app without downtime, would be to spin up new (green) deployment and                                                have DNS (say Route 53) switch traffic &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from the old (blue) deployment to the new deployment. There should be no downtime for   this method.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The App traffic flow is as below:
+The App traffic flow is as below:
 
 <img width="723" alt="Ceros-ski App Traffic Diagram" src="https://user-images.githubusercontent.com/37908685/56900121-0054c800-6a8d-11e9-9e5b-33cb8fb25a3b.png">
 
@@ -18,7 +19,7 @@
 
 **1. Infrastructure build using Terraform** 
   
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The infrastructure for the app is built using the concept of Infrastructure as Code on AWS using Terraform. The files used for this are:
+The infrastructure for the app is built using the concept of Infrastructure as Code on AWS using Terraform. The files used for this are:
   - **main.tf:** This contains the terraform config that builds the AWS infrastructure such as VPC, SG, IGW, subnet and the EC2 instance
   - **variables.tf:** This contains a listing of variables their default values
   - **output.tf:** This contains some important output values, such as the public IP of the instance through which the app would  be accessed through the internet.
@@ -26,8 +27,7 @@
 
 **2. App deployment on infrastructure using a bash script**
   
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After terraforms builds the EC2 Instance, it calls the bash script, **bootstrap.sh**, to deploy the app.
-  The bootstrap script does the following:
+After terraforms builds the EC2 Instance, it calls the bash script, **bootstrap.sh**, to deploy the app.The bootstrap script does the following:
   
   - Installs Docker community edition and other utilities
   - Starts and enables Docker (if not already started)
