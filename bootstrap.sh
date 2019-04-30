@@ -1,11 +1,11 @@
 #!/bin/bash
 
 ######This script bootstrap the server OS (Unbuntu 18.04 TLS)
-######It installs and starts Docker, build the application into a container and start same
+######It installs Docker, Docker-compose, builds the application into a container and starts same
 
-###preparing the docker engine and app folder###
+###preparing the docker engine, docker-compose and app folder###
 
-##Update the repository and install Docker community edition and unzip 
+#Update the repository
 sudo apt-get update
 #Install packages to allow apt to use a repository over HTTPS:
 sudo apt-get install -y \
@@ -23,7 +23,7 @@ sudo add-apt-repository \
    stable"
 #Update the apt package index
 sudo apt-get update
-#Install docker-ce version 18.06.0
+#Install docker-ce version 18.06.0 and containerd
 sudo apt-get install -y docker-ce=18.06.0~ce~3-0~ubuntu containerd.io
 #Install unzip
 sudo apt-get install -y unzip
@@ -36,7 +36,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 ##Start and enable the Docker engine
 sudo systemctl start docker && sudo systemctl enable docker
 
-##create the app folder, copy code to same and unzip
+##create the app folder, copy code to same and unzip app zip file
 sudo mkdir ./nodejs-app
 sudo mv ceros-ski.zip nodejs-app/
 cd ./nodejs-app
@@ -121,7 +121,7 @@ services:
       - ski_app_net
     restart: unless-stopped
 
-# node js app defined to run in multiple containers
+# ski node js app defined to run in multiple containers
   nj-app1:
     image: ceros/nj-app:v1
     container_name: nj-web-app1
