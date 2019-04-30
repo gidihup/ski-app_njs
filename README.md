@@ -2,11 +2,11 @@
 
 **Maintainer**: app-dev@ceros.com
     
-This is the documentation for deploying the ceros-ski app. The ceros-ski app is a nodejs app and same is ccontainerize using docker for deployment on EC2 on AWS. This set up fulfills all the general requirement for the deploy as in the challenge document. It also fulfills 2 of the bonus challenge save the last one.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the documentation for deploying the ceros-ski app. The ceros-ski app is a nodejs app and same is containerize using docker for deployment on EC2 on AWS. This set up fulfills all the general requirements for the deployment as in the challenge document. It also fulfills 2 of the bonus challenge, save the last one.
 
-One way to do the last bonus challenge, i.e. update app without downtime, would be to spin up new (green) deployment and                                                have DNS (say Route 53) switch traffic from the old (blue) deployment to the new deployment. There should be no downtime for   this method.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One way to do the last bonus challenge, i.e. update app without downtime, would be to spin up new (green) deployment and                                                have DNS (say Route 53) switch traffic from the old (blue) deployment to the new deployment. There should be no downtime for   this method.
 
-The App traffic flow is as below:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The App traffic flow is as below:
 
 <img width="723" alt="Ceros-ski App Traffic Diagram" src="https://user-images.githubusercontent.com/37908685/56900121-0054c800-6a8d-11e9-9e5b-33cb8fb25a3b.png">
 
@@ -18,7 +18,7 @@ The App traffic flow is as below:
 
 **1. Infrastructure build using Terraform** 
   
-  The infrastructure for the app is built using the concept of Infrastructure as Code on AWS using Terraform. The files used for this are:
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The infrastructure for the app is built using the concept of Infrastructure as Code on AWS using Terraform. The files used for this are:
   - **main.tf:** This contains the terraform config that builds the AWS infrastructure such as VPC, SG, IGW, subnet and the EC2 instance
   - **variables.tf:** This contains a listing of variables their default values
   - **output.tf:** This contains some important output values, such as the public IP of the instance through which the app would  be accessed through the internet.
@@ -26,7 +26,7 @@ The App traffic flow is as below:
 
 **2. App deployment on infrastructure using a bash script**
   
-  After terraforms builds the EC2 Instance, it calls the bash script, **bootstrap.sh**, to deploy the app.
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After terraforms builds the EC2 Instance, it calls the bash script, **bootstrap.sh**, to deploy the app.
   The bootstrap script does the following:
   
   - Installs Docker community edition and other utilities
@@ -41,9 +41,9 @@ The App traffic flow is as below:
 **To deploy the app, do the following:**
   - Have or create an AWS account
   - Have the app folder copied onto a deploy EC2 instance
-  - Have a valid Access key ID and Secret access key set up with the appropriate permisions on AWS IAM
-  - Have the Access key ID and Secret access key securely set to the appropriate variable in the variable.tf file, e.g. using enviroment variables (credentials should not be saved in (publicly acceessible) files)
+  - Have a valid Access key ID and Secret access key set up with the appropriate permissions on AWS IAM
+  - Have the Access key ID and Secret access key securely set to the appropriate variable in the variable.tf file, e.g. using environment variables (credentials should not be saved in (publicly accessible) files)
   - Have Terraform installed and initialised
-  - In your console, type t'erraform apply' then press enter key
+  - In your console, type terraform apply' then the press enter key
 
-After terraform concludes the deployment, it ouputs the public IP of the EC2 instance through which the application can be accessed on the internet.
+After terraform concludes the deployment, it outputs the public IP of the EC2 instance through which the application can be accessed on the internet.
