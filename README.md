@@ -3,9 +3,9 @@
 
 **Maintainer**: app-dev@ceros.com
     
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the documentation for deploying the ceros-ski app. The ceros-ski app is a nodejs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app and same is containerize using docker for deployment on EC2 on AWS. This set up fulfills all the general requirements for the deployment as in the challenge document. It also fulfills 2 of the bonus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;challenge, save the last one.
+This is the documentation for deploying the ceros-ski app. The ceros-ski app is a nodejs  app and same is containerize using docker for deployment on EC2 on AWS. This set up fulfills all the general requirements for the deployment as in the challenge document. It also fulfills 2 of the bonus challenge, save the last one.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One way to do the last bonus challenge, i.e. update app without downtime, would be to spin up new (green) deployment and                                                have DNS (say Route 53) switch traffic &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from the old (blue) deployment to the new deployment. There should be no downtime for   this method.
+One way to do the last bonus challenge, i.e. update app without downtime, would be to spin up new (green) deployment and                                                have DNS (say Route 53) switch traffic from the old (blue) deployment to the new deployment. There should be no downtime for   this method.
 
 The App traffic flow is as below:
 
