@@ -42,7 +42,7 @@ After terraforms builds the EC2 Instance, it calls the bash script, **bootstrap.
   - Have a valid Access key ID and Secret access key set up with the appropriate permissions on AWS IAM
   - Have the Access key ID and Secret access key securely set to the appropriate variable in the **variable.tf file**. Best practice dictates that credentials/secrets should not be publicly accessible, secrets can be defined in environment variables or a secret store
   - Have Terraform installed and initialised
-  - In your console, type **_terraform apply_** then press the enter key
+  - In your console, type **_terraform init then terraform apply_** then press the enter key
 
 After terraform concludes the deployment, it outputs the public IP (see example belwo) of the EC2 instance through which the application can be accessed on the internet.
 
