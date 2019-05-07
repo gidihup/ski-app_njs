@@ -120,7 +120,7 @@ connection {
     destination = "~/bootstrap.sh"
   }
 
-provisioner "remote-exec" {
+  provisioner "remote-exec" {
     inline = [
       "sudo chmod +x ~/bootstrap.sh",
       "sudo ~/bootstrap.sh",
