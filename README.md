@@ -49,4 +49,4 @@ After terraform concludes the deployment, it outputs the public IP (see example 
 
 <img width="723" alt="deployment_output" src="https://user-images.githubusercontent.com/37908685/56973879-a116b680-6b65-11e9-8dba-55d23bf83d6c.png">
 
-NB: One way to do the last bonus challenge, i.e. update app without downtime, would be to spin up new (green) deployment and                                                have DNS (say Route 53) switch traffic from the old (blue) deployment to the new deployment. There should be no downtime for   this.
+NB: One way to do the last bonus challenge, i.e. update app without downtime, would be to spin up new (green) deployment and                                                have DNS (say Route 53) switch traffic from the old (blue) deployment to the new deployment. There should be no downtime for   this method.
